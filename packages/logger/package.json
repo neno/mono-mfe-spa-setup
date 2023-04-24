@@ -1,5 +1,5 @@
 {
-  "name": "logger",
+  "name": "@myorg/logger",
   "version": "0.0.0",
   "private": true,
   "main": "./dist/index.js",
@@ -22,10 +22,10 @@
     "@types/jest": "^26.0.22",
     "@types/node": "^18.11.9",
     "eslint": "^7.32.0",
-    "eslint-config-custom": "workspace:*",
+    "@myorg/eslint-config-custom": "workspace:*",
     "jest": "^26.6.3",
-    "jest-presets": "workspace:*",
-    "tsconfig": "workspace:*",
+    "@myorg/jest-presets": "workspace:*",
+    "@myorg/tsconfig": "workspace:*",
     "typescript": "^4.8.3"
   }
 }

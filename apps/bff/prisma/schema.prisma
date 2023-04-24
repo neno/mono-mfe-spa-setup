@@ -1,0 +1,40 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model listingsAndReviews {
+  id                      Int    @id @default(autoincrement())
+  accommodates            Int
+  address_government_area String
+  address_street          String
+  address_suburb          String
+  amenities               String
+  bathrooms               Float?
+  bedrooms                Int?
+  beds                    Int
+  description             String
+  picture_url             String
+  name                    String
+  neighborhood_overview   String
+  price                   Float
+  property_type           String
+  space                   String
+  summary                 String
+  review_scores_rating    Int?
+  room_type               String
+
+  @@index([room_type], map: "index_room_type")
+  @@index([property_type], map: "index_property_type")
+  @@index([review_scores_rating], map: "index_review_score_rating")
+  @@index([price], map: "index_price")
+  @@index([beds], map: "index_beds")
+  @@index([bedrooms], map: "index_bedrooms")
+  @@index([bathrooms], map: "index_bathrooms")
+  @@index([amenities], map: "index_amenities")
+  @@index([address_suburb], map: "index_address_suburb")
+}

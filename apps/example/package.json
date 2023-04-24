@@ -1,0 +1,32 @@
+{
+  "name": "@myorg/example",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc && vite build",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "dev": "vite --host 0.0.0.0 --clearScreen false",
+    "preview": "vite preview --host 0.0.0.0 --port 30010 --strictPort",
+    "lint": "tsc --noEmit && eslint \"src/**/*.ts*\""
+  },
+  "dependencies": {
+    "@myorg/filterbar": "workspace:*",
+    "@myorg/listing": "workspace:*",
+    "@myorg/store": "workspace:*",
+    "@myorg/ui": "workspace:*",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@myorg/eslint-config-custom": "workspace:*",
+    "@myorg/tsconfig": "workspace:*",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@types/styled-components": "^5.1.26",
+    "@vitejs/plugin-react": "^3.1.0",
+    "styled-components": "^5.3.9",
+    "typescript": "^4.9.3",
+    "vite": "^4.2.0"
+  }
+}
