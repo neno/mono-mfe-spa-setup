@@ -45,7 +45,7 @@ export const ListingFilterFields = () => {
       </StyledInlineFormList>
       <CheckBoxGroup
         title='Choose Suburb'
-        items={sububrs.map((item) => ({ name: item, value: item }))}
+        items={sububrs.map((item) => ({ name: 'suburb', value: item }))}
       />
       <div>
         <PrimaryButton type='submit'>Submit</PrimaryButton>
