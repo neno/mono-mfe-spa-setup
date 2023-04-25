@@ -9,7 +9,7 @@ This monorepo uses [turborepo](https://turbo.build/) with [pnpm](https://pnpm.io
 ### Apps (micro frontends)
 
 - `bff`: a Backend for Frontend API implemented with [Express.js](https://expressjs.com/). It uses [Prisma](https://www.prisma.io/) and a sqlite database to store some demo data to simulate the listings similiar to AirBnb .
-- `filterbar`: a [React](https://react.dev/) app / parcel that filters the listings from the bff. The filter is stored inside the Jotai store and triggers the query (useListings).
+- `filterbar`: a [React](https://react.dev/) app / parcel that filters the listings from the bff. The filter is stored inside the shared store and triggers the query (useListings).
 - `listing`: a [React](https://react.dev/) app / parcel that displays the listings from the bff. It uses the useListings hook to fetch the listings from the bff.
 - `example`: a [React](https://react.dev/) app that includes the other apps as micro frontends
 

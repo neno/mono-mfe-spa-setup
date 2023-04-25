@@ -26,7 +26,6 @@ export const FilterBar = () => {
   };
   return (
     <div>
-      <h2>FilterBar {searchQuery}</h2>
       <form onSubmit={handleSubmit}>
         <ListingFilterFields />
       </form>

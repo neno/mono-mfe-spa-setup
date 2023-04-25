@@ -6,7 +6,6 @@ export const Listing = () => {
 
   return (
     <div>
-      <h2>Listing</h2>
       {listingsData && (
         <Gallery>
           {listingsData.map((listing: any) => (
