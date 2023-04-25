@@ -101,6 +101,9 @@ importers:
       '@myorg/ui':
         specifier: workspace:*
         version: link:../../packages/ui
+      '@originjs/vite-plugin-federation':
+        specifier: ^1.2.2
+        version: 1.2.2
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -144,6 +147,9 @@ importers:
       '@myorg/ui':
         specifier: workspace:*
         version: link:../../packages/ui
+      '@originjs/vite-plugin-federation':
+        specifier: ^1.2.2
+        version: 1.2.2
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -187,6 +193,9 @@ importers:
       '@myorg/ui':
         specifier: workspace:*
         version: link:../../packages/ui
+      '@originjs/vite-plugin-federation':
+        specifier: ^1.2.2
+        version: 1.2.2
       '@types/styled-components':
         specifier: ^5.1.26
         version: 5.1.26
@@ -1217,6 +1226,14 @@ packages:
       fastq: 1.15.0
     dev: true
 
+  /@originjs/vite-plugin-federation@1.2.2:
+    resolution: {integrity: sha512-XrK782lOdReKjvoeu3xw0q4M4xJpKwcFbDfiLauX0DJf/hwcP3zQ9z83bSIpJglAwrH5ezo+bZfl2/ueWItJfw==}
+    engines: {node: '>=14.0.0', pnpm: '>=7.0.1'}
+    dependencies:
+      estree-walker: 3.0.3
+      magic-string: 0.27.0
+    dev: false
+
   /@prisma/client@4.13.0(prisma@4.13.0):
     resolution: {integrity: sha512-YaiiICcRB2hatxsbnfB66uWXjcRw3jsZdlAVxmx0cFcTc/Ad/sKdHCcWSnqyDX47vAewkjRFwiLwrOUjswVvmA==}
     engines: {node: '>=14.17'}
@@ -1342,6 +1359,10 @@ packages:
     dependencies:
       '@types/node': 18.15.11
     dev: true
+
+  /@types/estree@1.0.1:
+    resolution: {integrity: sha512-LG4opVs2ANWZ1TJoKc937iMmNstM/d0ae1vNbnBvBhqCSezgVUOzcLCqbI5elV8Vy6WKwKjaqR+zO9VKirBBCA==}
+    dev: false
 
   /@types/express-serve-static-core@4.17.33:
     resolution: {integrity: sha512-TPBqmR/HRYI3eC2E5hmiivIzv+bidAfXofM+sbonAGvyDhySGw9/PQZFt2BLOrjUUR++4eJVpx6KnLQK1Fk9tA==}
@@ -2819,6 +2840,12 @@ packages:
   /estraverse@5.3.0:
     resolution: {integrity: sha512-MMdARuVEQziNTeJD8DgMqmhwR11BRQ/cBP+pLtYdSTnf3MIO8fFeiINEbX36ZdNlfU/7A9f3gUw49B3oQsvwBA==}
     engines: {node: '>=4.0'}
+
+  /estree-walker@3.0.3:
+    resolution: {integrity: sha512-7RUKfXgSMMkzt6ZuXmqapOurLGPPfgj6l9uRZ7lRGolvk0y2yocc35LdcxKC5PQZdn2DMqioAQ2NoWcrTKmm6g==}
+    dependencies:
+      '@types/estree': 1.0.1
+    dev: false
 
   /esutils@2.0.3:
     resolution: {integrity: sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==}
@@ -4359,7 +4386,6 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       '@jridgewell/sourcemap-codec': 1.4.14
-    dev: true
 
   /make-dir@3.1.0:
     resolution: {integrity: sha512-g3FeP20LNwhALb/6Cz6Dd4F2ngze0jz7tbzrD2wAV+o9FeNHe4rL+yK2md0J/fiSf1sa1ADhXqi5+oVwOM/eGw==}
